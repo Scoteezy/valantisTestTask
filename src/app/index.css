@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+ 
+@layer base {
+  :root {
+    --background: 0 0% 100%;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+ 
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+ 
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+ 
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+ 
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+ 
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+ 
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+ 
+    --radius: 0.5rem;
+  }
+ 
+  .dark {
+    --background: 222.2 84% 4.9%;
+    --foreground: 210 40% 98%;
+ 
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+ 
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+ 
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+ 
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+ 
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+ 
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+ 
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+ 
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+ 
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-neutralLight-0 dark:bg-neutralBlack-0 text-foreground text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+}
+@layer utilities {
+  .wrapper {
+    @apply max-w-7xl lg:mx-auto p-5 md:px-10 xl:px-0 w-full;
+  }
+
+  .flex-center {
+    @apply flex justify-center items-center;
+  }
+
+  .flex-between {
+    @apply flex justify-between items-center ;
+  }
+  /* TYPOGRAPHY */
+  /* 40 */
+  .h1-regular {
+    @apply font-medium text-[35px] leading-[57px] lg:text-[35px] lg:leading-[57px]  xl:text-[40px] xl:leading-[57px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  /* 24 */
+  .h2-regular {
+    @apply font-medium text-[24px] leading-[35px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+
+  /* 20 */
+  .p-bold-20 {
+    @apply font-bold text-[20px] leading-[30px] tracking-[2%] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-semibold-20 {
+    @apply text-[20px] font-semibold leading-[30px] tracking-[2%] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-medium-20 {
+    @apply text-[20px] font-medium leading-[30px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-regular-20 {
+    @apply text-[20px] font-normal leading-[1.4em] tracking-[2%] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  /* 18 */
+  .p-semibold-18 {
+    @apply text-[18px] font-semibold leading-[28px] tracking-[2%] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-medium-18 {
+    @apply text-[18px] font-medium leading-[28px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-regular-18 {
+    @apply text-[18px] font-normal leading-[28px] tracking-[2%] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  /* 16 */
+  .p-bold-16 {
+    @apply text-[16px] font-bold leading-[24px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-medium-16 {
+    @apply text-[16px] font-medium leading-[24px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-regular-16 {
+    @apply text-[16px] font-normal leading-[1.4em] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  /* 14 */
+  .p-semibold-14 {
+    @apply text-[14px] font-semibold leading-[20px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-medium-14 {
+    @apply text-[14px] font-medium leading-[20px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  .p-regular-14 {
+    @apply text-[14px] font-normal leading-[20px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+
+  /* 12 */
+  .p-medium-12 {
+    @apply text-[12px] font-medium leading-[20px] text-defaultTextWhite dark:text-defaultTextBlack;
+  }
+   /* SHADCN OVERRIDES */
+  .input-field {
+    @apply h-[54px] focus-visible:ring-offset-0  rounded-xl p-regular-16 px-4 py-3 border-none focus-visible:ring-transparent !important;
+  }
+
+}
